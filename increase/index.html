@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btns{
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <div><h1 class="h1"></h1></div>
+        <div class="btns">
+            <button class="plus">+</button>
+            <button class="reset">reset</button>
+            <button class="minus">-</button>
+        </div>
+    </div>
+    <script defer>
+
+        let number = 0
+        document.querySelector(".h1").innerHTML = "" + number + "";
+
+
+        document.querySelector(".plus").addEventListener('click', function(){
+            number = number + 1
+            console.log(number)            
+            document.querySelector(".h1").innerHTML = "" + number + "";
+        })
+
+        document.querySelector(".minus").addEventListener('click', function(){
+            number = number - 1
+            console.log(number)            
+            document.querySelector(".h1").innerHTML = "" + number + "";
+        })
+
+        document.querySelector(".reset").addEventListener('click', function(){
+            number = 0
+            document.querySelector(".h1").innerHTML = "" + number + "";
+        })
+
+        console.log(number)
+        
+
+    </script>
+</body>
+</html>

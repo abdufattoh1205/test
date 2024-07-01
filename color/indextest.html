@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Background Color</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <label for="colorInput">Enter color code:</label>
+  <input type="text" id="colorInput" placeholder="Enter color code">
+
+  <button onclick="changeBackgroundColor()">Change Background Color</button>
+
+  <script>
+    function changeBackgroundColor() {
+      // Step 1: Get the input element's value
+      var colorCode = document.getElementById('colorInput').value;
+
+      // Step 2: Select the element to change its background color
+      var targetElement = document.body;
+
+      // Step 3: Set the background color
+      targetElement.style.backgroundColor = colorCode;
+    }
+  </script>
+
+</body>
+</html>
